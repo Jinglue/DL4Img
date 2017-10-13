@@ -12,11 +12,15 @@ GPU 服务器完成 nvidia-driver, docker 以及 nvidia-docker 的安装后，�
 直接启动安装了 `nvidia-driver`, `docker` 以及 `nvidia-docker` 的机器之后，请在 Linux 终端输入如下内容，启动本镜像:
 
 ```
-systemctl start docker
-systemctl start nvidia-docker
+sudo systemctl start docker
+sudo systemctl start nvidia-docker
 
+# 这里直接装在home目录(~)，其他目录也可以。
+cd ~
+git clone https://github.com/Jinglue/DL4Img
+cd DL4Img
 # 使用国内 daocloud.io Dockerhub 源加速
-nvidia-docker run -d -p=6006:6006 -p=8888:8888 -v ./notebook:/srv daocloud.io/kaiserw/qcloud_gpu:gpudocker-f53f84d
+sudo nvidia-docker run -d -p=6006:6006 -p=8888:8888 -v ~/notebook:/srv daocloud.io/kaiserw/qcloud_gpu:gpudocker-f53f84d
 ```
 
 镜像打开后，读者可以在浏览器中输入：
