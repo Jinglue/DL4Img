@@ -1,6 +1,4 @@
-name: tencentGPU
-channels:
-    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+name: py3
 dependencies:
     - python==3.5.2
     - numpy==1.12.1
