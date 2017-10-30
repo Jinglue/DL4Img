@@ -10,7 +10,7 @@ notebook/Lecture8/*gz
 notebook/Lecture8/pred.csv
 notebook/Lecture8/sample_submission.csv
 notebook/Lecture8/*test*
-notebook/Lecture8/*train*
+notebook/Lecture8/*train
 
 notebook/Lecture9/image_contest*
 notebook/Lecture9/model.h5
