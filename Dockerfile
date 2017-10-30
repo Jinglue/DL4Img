@@ -43,18 +43,18 @@ ADD https://repo.continuum.io/miniconda/Miniconda3-4.2.12-Linux-x86_64.sh tmp/Mi
 RUN bash tmp/Miniconda3-4.2.12-Linux-x86_64.sh -b
 ENV PATH $PATH:/root/miniconda3/bin/
 
-COPY environment.yml  ./environment.yml
+COPY environment_py2.yml ./environment_py2.yml
+COPY environment_py3.yml ./environment_py3.yml
+RUN conda env create -f=environment_py2.yml --name py2 --debug -v -v
+RUN conda env create -f=environment_py3.yml --name py3 --debug -v -v
+COPY libcudnn.so.6.0.21 /usr/lib/libcudnn.so.6
 
-RUN conda env create -f=environment.yml --name tencentGPU --debug -v -v
-
-# for jupyter
+WORKDIR /root
+RUN mkdir -p .jupyter
+COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 EXPOSE 8888
-
-# for tensorboard
 EXPOSE 6006
-
 WORKDIR /srv/
-
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/run.sh"]
