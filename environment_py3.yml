@@ -21,3 +21,4 @@ dependencies:
         - cairocffi==0.8.0
         - captcha==0.2.2
         - editdistance==0.3.1
+        - tqdm
