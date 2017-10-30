@@ -8,8 +8,8 @@ dependencies:
   - jupyter==1.0.0
   - h5py==2.7.0
   - scikit-learn==0.18.1
-  - captcha==0.2.4
   - pip:
+    - captcha==0.2.4
     - opencv_python==3.3.0.10
     - seaborn==0.8.1
     - pillow==4.3.0
