@@ -47,9 +47,11 @@ COPY environment_py2.yml ./environment_py2.yml
 COPY environment_py3.yml ./environment_py3.yml
 RUN conda env create -f=environment_py2.yml --name py2 --debug -v -v
 RUN conda env create -f=environment_py3.yml --name py3 --debug -v -v
-COPY libcudnn.so.6.0.21 /usr/lib/libcudnn.so.6
-
 WORKDIR /root
+ADD http://dl4img-1251985129.cosbj.myqcloud.com/cudnn-8.0-linux-x64-v6.0.tgz .
+RUN tar -zxvf cudnn-8.0-linux-x64-v6.0.tgz
+RUN cp cuda/lib64/libcudnn.so.6.0.21 /usr/lib/libcudnn.so.6
+
 RUN mkdir -p .jupyter
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 EXPOSE 8888
