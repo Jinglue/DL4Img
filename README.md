@@ -11,7 +11,7 @@ GPU 服务器完成 nvidia-driver, docker 以及 nvidia-docker 的安装后，�
 
 直接启动安装了 `nvidia-driver`, `docker` 以及 `nvidia-docker` 的机器之后，请在 Linux 终端输入如下内容，启动本镜像:
 
-```
+```shell
 systemctl start docker
 systemctl start nvidia-docker
 
@@ -72,7 +72,7 @@ http://[购买云服务器的IP地址]:8888
 
 ### 使用 Ubuntu16.04
 
-```
+```shell
 # 安装 CUDA
 wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 
@@ -107,7 +107,7 @@ sudo nvidia-docker pull daocloud.io/kaiserw/qcloud_gpu:gpudocker-f53f84d
 
 ### 使用 CentOS 7
 
-```
+```shell
 # 安装 CUDA
 wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-rhel7-8-0-local-ga2-8.0.61-1.x86_64-rpm
 
