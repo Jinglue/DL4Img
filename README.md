@@ -10,9 +10,9 @@ GPU 服务器完成 nvidia-driver, docker 以及 nvidia-docker 的安装后，�
 systemctl start docker
 systemctl start nvidia-docker
 
-git clone https://github.com/huboqiang/dl4img
+git clone https://github.com/Jinglue/dl4img
 nvidia-docker pull hubq/dl4img
-nvidia-docker run -d -v /home/ubuntu/dl4img/notebook/:/srv -p 8888:8888 -p 6006:6006 hubq/dl4img
+nvidia-docker run -d -v ~/dl4img/notebook/:/srv -p 8888:8888 -p 6006:6006 hubq/dl4img
 ```
 
 镜像打开后，读者可以在浏览器中输入：
