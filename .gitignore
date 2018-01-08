@@ -1,6 +1,15 @@
 */*npy
+.gitignore
 notebook/.ipynb_checkpoints/
 notebook/udacity_vehicle.tar.gz
+notebook/model*mlmodel
+notebook/model*h5
+notebook/*tar.gz
+notebook/test
+notebook/train
+notebook/._test
+notebook/._train
+notebook/sample_submission.csv
 notebook/dataset
 
 *ipynb_checkpoints
@@ -12,7 +21,8 @@ notebook/Lecture8/*test*
 notebook/Lecture8/*train
 
 notebook/Lecture9/image_contest*
-notebook/Lecture9/model.h5
+notebook/Lecture9/model*h5
+notebook/Lecture9/model*mlmodel
 notebook/Lecture9/*train
 notebook/Lecture9/baiduyun_deeplearning_competition/round1/*h5
 notebook/Lecture9/baiduyun_deeplearning_competition/round2/crop_split*
